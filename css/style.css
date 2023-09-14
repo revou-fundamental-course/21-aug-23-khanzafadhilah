@@ -1,0 +1,267 @@
+@import
+'https://fonts.googleapis.com/css?family=Lato:400,700';
+@import
+'https://fonts.googleapis.com/css2?family=DynaPuff&display=swap';
+
+:root {
+    --blue1: #040D12;
+    --blue2: #183D3D;
+    --green1: #5C8374;
+    --green2: #93B1A6;
+    --black: #000;
+    --grey: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, button {
+    font-family: 'Lato', sans-serif;
+    color: var(--blue1);
+}
+
+button {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header {
+    background-color: var(--green2);
+    color: var(--blue1);
+    font-family: 'DynaPuff', cursive;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    filter: drop-shadow(0 6px 11px rgba(0,0,0,.25))
+}
+
+.header1 {
+    color: var(--blue2);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px var(--green1);
+    font-size: 38px;
+    text-decoration: none;
+}
+
+.header2 {
+    color: var(--green1);
+    margin-top: 5px;
+    text-shadow: 1px 1px 2px var(--green1);
+    font-weight: 200;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.container {
+    margin: 50px 30px;
+    padding: 60px 20px;
+    background-color: var(--grey);
+    border: 1px solid var(--green2);
+    border-radius: 5px;
+}
+
+.content-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.intro, .opening {
+    margin-bottom: 20px;
+}
+
+.btn-menu {
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+}
+
+.btn-menu:hover {
+    width: 100%;
+    color: var(--grey);
+    background-color: var(--green2);
+}
+
+h2 {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue2);
+    color: var(--green2);
+    font-size: 24px;
+}
+
+.main-content {
+    display: none;
+    visibility: hidden;
+    justify-content: space-evenly;
+}
+
+#persegi, #persegi-panjang {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 20px;
+}
+
+.title-persegi, .title-persegi-panjang {
+    margin-top: 20px;
+    border: 1px solid var(--green1);
+}
+
+.content-persegi, .content-persegi-panjang {
+    padding: 20px;
+    border: 1px solid var(--green1);
+    height: 100%;
+}
+
+img {
+    height: 150px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.rumus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+h3 {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.input-hitung {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 5px;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    visibility: hidden;
+    display: none;
+    align-self: stretch;
+}
+
+.hasil-hitung {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    align-self: stretch;
+}
+
+.btn-operation {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-hitung, .btn-reset {
+    height: 35px;
+    margin: 0 20px;
+    border: none;
+    background-color: var(--green1);
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.btn-hitung:hover, .btn-reset:hover {
+    background-color: var(--blue2);
+}
+
+.btn-hitung {
+    width: 120px;
+}
+
+.btn-reset {
+    width: 80px;
+    margin-top: 50px;
+    margin-left: 32vw;
+}
+
+.reset-persegi {
+    margin-top: 100px;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: var(--green2);
+    color: var(--blue1);
+    font-size: 16px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 124px;
+    }
+
+    .header1 {
+        font-size: 34px;
+    }
+
+    .header2 {
+        font-size: 24px;
+    }
+
+    .container {
+        margin: 45px 30px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    #persegi, #persegi-panjang {
+        align-self: center;
+        width: 100%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .btn-reset {
+        margin-left: 57vw;
+    }
+
+    footer {
+        height: 40px;
+    }
+}

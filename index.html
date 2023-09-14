@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaltik | Kalkulator Matematik</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <header>
+        <a class="header1" href="./index.html"><b>Kaltik</b></a>
+        <a class="header2" href="./index.html">Kalkulator Matematik</a>
+    </header>
+
+    <div class="container">
+        <section class="content-title">
+            <div class="opening">
+                <h1 class="intro">Welcome to Kaltik</h1>
+                <p>Hi, Guys! Selamat datang di Kaltik</p>
+                <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+            </div>
+    
+            <div class="menu">
+                <button class="btn-menu" onclick="persegi()">Persegi</a><br>
+                <button class="btn-menu" onclick="persegiPanjang()">Persegi Panjang</a>
+            </div>
+        </section>
+        
+        <section class="main-content" id="main-content">
+            <div id="persegi">
+                <h2 class="title-persegi">Persegi</h2>
+                <div class="content-persegi">
+                    <img src="./assets/persegi.png" alt="Persegi">
+                    
+                    <div class="rumus">
+                        <p><u>Rumus Luas Persegi</u></p><br>
+                        <p class="rumus"><b>L = s x s</b></p><br>
+                        <p><u>Rumus Keliling Persegi</u></p><br>
+                        <p class="rumus"><b>K = 4 x s</b></p><br>
+                    </div>
+        
+                    <p>dimana</p>
+                    <p>L = Luas</p>
+                    <p>K = Keliling</p>
+                    <p>s = Sisi</p>
+                    <br>
+                    <hr>
+    
+                    <h3>Hitung Luas dan Keliling Persegi</h3>
+    
+                    <div class="input-hitung">
+                        <input
+                            name="sisi"
+                            id="sisi"
+                            type="number"
+                            placeholder="Nilai Sisi">
+                        <p class="error-msg" id="sisi-error"></p>
+                        <div class="hasil-hitung">
+                            <p id="perhitunganLP"></p>
+                            <p id="hasilLP"></p>
+                            <br>
+                            <p id="perhitunganKP"></p>
+                            <p id="hasilKP"></p>
+                        </div>
+                        <div class="btn-operation">
+                            <button class="btn-hitung" onclick="luasPersegi()">Hitung Luas</button>
+                            <button class="btn-hitung" onclick="kelilingPersegi()">Hitung Keliling</button>
+                        </div>
+                        <button class="btn-reset reset-persegi" onclick="resetPersegi()">Reset</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="persegi-panjang">
+                <h2 class="title-persegi-panjang">Persegi Panjang</h2>
+                <div class="content-persegi-panjang">
+                    <img src="./assets/persegi panjang.png" alt="Persegi Panjang">
+                    
+                    <div class="rumus">
+                        <p><u>Rumus Luas Persegi Panjang</u></p><br>
+                        <p class="rumus"><b>L = p x l</b></p><br>
+                        <p><u>Rumus Keliling Persegi Panjang</u></p><br>
+                        <p class="rumus"><b>K = 2 x (p + l)</b></p><br>
+                    </div>
+        
+                    <p>dimana</p>
+                    <p>L = Luas</p>
+                    <p>K = Keliling</p>
+                    <p>p = Panjang</p>
+                    <p>l = Lebar</p>
+                    <hr>
+    
+                    <h3>Hitung Luas dan Keliling Persegi Panjang</h3>
+        
+                    <div class="input-hitung">
+                        <input
+                            name="panjang"
+                            id="panjang"
+                            type="number"
+                            placeholder="Nilai Panjang">
+                        <p class="error-msg" id="panjang-error"></p>
+                        <input
+                            name="lebar"
+                            id="lebar"
+                            type="number"
+                            placeholder="Nilai Lebar">
+                        <p class="error-msg" id="lebar-error"></p>
+                        <div class="hasil-hitung">
+                            <p id="perhitunganLPP"></p>
+                            <p id="hasilLPP"></p>
+                            <br>
+                            <p id="perhitunganKPP"></p>
+                            <p id="hasilKPP"></p>
+                        </div>
+                        <div class="btn-operation">
+                            <button class="btn-hitung" onclick="luasPersegiPanjang()">Hitung Luas</button>
+                            <button class="btn-hitung" onclick="kelilingPersegiPanjang()">Hitung Keliling</button>
+                        </div>
+                        <button class="btn-reset" onclick="resetPersegiPanjang()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2023 Kaltik Inc.</p>
+    </footer>
+</body>
+</html>
